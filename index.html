@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7271a5d544.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body >
+<!-- navbar -->
+
+<nav class=" navbar navbar-dark bg-dark" >
+  <div class="container-fluid">
+    
+    <span class="navbar-text">
+     Mestiza 
+     <i class="fas fa-hat-cowboy-side"></i>
+    </span>
+    
+  </div>
+  
+</nav>
+<!-- jumbotron -->
+<div  id="color-fondo-jumbo" class="jumbotron >
+    <h1 class="display-4 centrar color-letra letrajumbo">Mestiza </h1>
+    
+    <p class="lead centrar  color-letra letrajumbo ">Somos un emprendimiento de ropa unica. Cada prenda tiene horas de trabajo, diseño y perfeccionamiento. Queremos que encuentres tu prenda preferida y que sepas que como la tuya no existe nada igual. </p>
+    <hr class="my-4">
+    
+    <p></p>
+  
+  </div>
+ <!-- PAGE CONTENT -->
+ 
+  <div class="container ">
+    <div class="row">
+      <div class="col-lg-3">
+        <h1 class="my-4 color-letra letra-jumbo" >Mestiza</h1>
+        <div class="list-group">
+          <div class="list-group-item">
+            Precio Total: <span id="precio-total"></span>
+            <!-- <a href="#" class="list-group-item" id="precio-total">No hay productos en el carrito</a> -->
+          </div>
+
+
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+              Lista de Productos
+            </button>
+      
+            <div class="dropdown-menu" id="lista-productos">
+              
+            </div>
+          </div>
+          <button type="button" class="btn btn-danger" id="vaciar"  >Vaciar Carrito</button>
+        </div>
+      </div>
+
+      <!-- CATALOGO -->
+
+  <div class="div-formulario"  >
+
+  <div class="row" id="productos" >
+
+    <div class="col-lg-4 col-md-6 mb-4"  >
+      <div class="card h-100">
+        <a href="#" ><img class="card-img-top" ></a>
+        <div  class="card-body">
+          <h4 class="card-title">
+            <a href="#">Item One</a>
+          </h4>
+          <h5>$24.99</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+        </div>
+      </div>
+    </div>
+    <i class="fas fa-hat-cowboy-side"></i>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100">
+        <a href="#"></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">Item Two</a>
+          </h4>
+          <h5>$24.99</h5>
+          <p   class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100">
+        <a href="#"></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">Item Three</a>
+          </h4>
+          <h5>$24.99</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" alt=""></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">Item Four</a>
+          </h4>
+          <h5>$24.99</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" ></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">Item Five</a>
+          </h4>
+          <h5>$24.99</h5>
+          <p class="card-text">el amor</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" ></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">Item Six</a>
+          </h4>
+          <h5>$24.99</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+
+
+<!-- bootstrap js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- codigo -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+#color-fondo-jumbo{
+  background-color:rgba(7, 7, 7, 0.897);
+}
+.centrar{
+    text-align: center;
+}
+
+body {
+    text-align: center;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlteEuIl2Ut1oSxGn3s4fz7o27zZUrCK7z_Q&usqp=CAU");}
+    
+
+.imagenes{
+        
+
+    width: 200px;
+
+}
+
+
+.costado{
+
+    width: 80%;
+    margin: auto;
+}
+
+
+.color-letra{
+    color: white;
+}
+
+.letra-p{
+    font-family: 'Coda Caption', sans-serif;  
+    text-align: center;
+
+}
+
+.navbar{
+    padding: 3%;
+}
+
+.div-formulario{
+   width: 1000px;
+   height: 1000px;
+   margin-left: 250px;
+
+}
+
+.letra-nav{
+    font-family: 'Londrina Solid', cursive;
+    font-size: 15px;
+}
+
+.letrajumbo{
+    font-family: 'Londrina Solid', cursive;
+}
+
+.final{
+    background-color: black;
+}
