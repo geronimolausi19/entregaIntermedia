@@ -5,10 +5,17 @@ class producto {
     this.precio = precio;
     this.imagen = imagen;
     this.stock = stock;
+    this.cantidad = 1
   }
 }
 
 let baseDeDatos = [];
+let carrito = [];
+//elementos HTML
+const btnVaciarCarrito = document.getElementById("btn-vaciar-carrito")
+
+//Eventos
+btnVaciarCarrito.addEventListener("click", vaciarCarrito)
 
 let producto1 = new producto(
   "Remera sucundum",
@@ -90,27 +97,52 @@ for (let i = 0; i < baseDeDatos.length; i++) {
 document.getElementById("productos").innerHTML = aux;
 
 // Json
-let carrito = [];
 
-if (localStorage.getItem("carrito") != "null") {
+let carritoStorage = localStorage.getItem("carrito")
+if (carritoStorage !=null) {
   console.log("entro a la validacion")
 
-  let valoresDelCarrito = JSON.parse(localStorage.getItem("carrito"));
+  let valoresDelCarrito = JSON.parse(carritoStorage );
   carrito = valoresDelCarrito;
+  actulizarCarritoHTML()
 }
 
 function agregarAlCarrito(producto) {
-  carrito.push(producto);
-  console.log(carrito);
-  localStorage.setItem("carrito", JSON.stringify(carrito));
-  // precio total
-  let aux = 0;
+  let productoCarrito = null
+  //buscamos si el carrito existe
+
   for (let i = 0; i < carrito.length; i++) {
-    aux += carrito[i].precio;
-  
+  if(carrito[i].nombre == producto.nombre){
+    productoCarrito = carrito [i]
   }
-  document.getElementById("precio-total").innerHTML = aux;
+  }
+  if(carrito.length== 0 || productoCarrito == null){
+    carrito.push(producto)
+  }else if( productoCarrito !=null){
+    productoCarrito.cantidad++
+  }
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  actulizarCarritoHTML()
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function borrarUnProducto() {
   const nuevoCarrito = [];
@@ -121,56 +153,77 @@ function borrarUnProducto() {
   }
   localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
   carrito = nuevoCarrito;
+  actulizarCarritoHTML()
 }
 
-document.getElementById("vaciar").addEventListener("click",vaciarCarrito())
 
 function vaciarCarrito(){
   carrito=[]
   localStorage.setItem("carrito", JSON.stringify(carrito));
+  actulizarCarritoHTML()
 }
 
 
-      
 
 
 
 
+function actulizarCarritoHTML(){
+  const $btnPrecioTotal = document.getElementById("precio-total")
+  const $listaProducto =document.getElementById("lista-productos")
+  let precioTotal = 0;
+  let listaProducto = ""
+  for (let i = 0; i < carrito.length; i++) {
+
+    //lista producto
+    listaProducto += `
+    <div class="dropdown-item">
+      nombre: ${carrito[i].nombre}
+      <br>
+      <span>precio: $${carrito[i].precio}</span>
+      <span>cantidad: x${carrito[i].cantidad}</span>
+    </div>
+    <hr>`
+
+    //precio total
+    precioTotal += carrito[i].precio * carrito[i].cantidad;
+  }
+  $btnPrecioTotal.innerHTML = precioTotal;
+  // operador ternario
+  // $listaProducto.innerHTML = (listaProducto == "") ? "No hay productos" : listaProducto
+  // $listaProducto.innerHTML = "No hay productos"
+  // $listaProducto.innerHTML = listaProducto
+  if(listaProducto == ""){
+    $listaProducto.html = "No hay productos";  
+  }else{
+    $listaProducto.innerHTML = listaProducto;
+  }
+}
+
+    
+// function compra(){
+//   let nombre = $("#input-nombre").val();
+//   let apellido = $("#input-apellido").val();
+//   let edad = $("#input-edad").val();
+
+//   if(edad>=18){
+//       $("#parrafo-estadodecompra").html("COMPRA ACEPTADA");
+//   }else{
+//       $("#parrafo-estadodecompra").html("COMPRA DENEGADA");
+//   }
+// }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// document.getElementById("boton-gero").addEventListener("click",ponerValor())
-
-
-
-//  function ponerValor(){
-//   let mostrar= document.getElementById("valor1").value
-//   console.log(mostrar)
-//    input =`
-//   <h1 class="my-4 color-letra letra-jumbo" id="nombrePersona" >${mostrar} </h1>
-//   `;
-//   document.getElementById("nombrePersona").innerHTML= input
+// function compra(){
+//   let nombre = $('#nombre');
+//   let nombreUsuario = nombre.val();
+//   let apellido = $('#apellido');
+//   let apellidoUsuario = apellido.val();
+//   if ($('#edad') >= 18){
+//       alert('Bienvenido '+ nombreUsuario + '' + apellidoUsuario + '. Tu compra fue validada.')
+//   } else {
+//       alert('Sos menor de edad, tu compra no fue validada.')
+//   }
 // }
 
 
@@ -178,12 +231,22 @@ function vaciarCarrito(){
 
 
 
-// document.getElementById("valor1").addEventListener("click",validar())
 
 
-// function validar(){
-// let contraseña = document.getElementById("valor1")
-// if(contraseña.length>4){
-//   alert("esa contraseña es larga")
-// }
-// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 #color-fondo-jumbo{
-  background-color:rgba(7, 7, 7, 0.897);
+  background-color:rgba(43, 39, 39, 0.76);
 }
 .centrar{
     text-align: center;
@@ -42,7 +42,9 @@ body {
 .div-formulario{
    width: 1000px;
    height: 1000px;
-   margin-left: 250px;
+   margin-left: 280px;
+
+   
 
 }
 
@@ -58,3 +60,10 @@ body {
 .final{
     background-color: black;
 }
+
+.carrito{
+    margin-left: 600xp;
+}
+
+/* segunda pagina */
+
