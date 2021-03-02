@@ -21,7 +21,7 @@ let producto1 = new producto(
   "Remera sucundum",
   "Large",
   3000,
-  "https://cdn.shopify.com/s/files/1/0036/4409/6627/products/hormigaremerablancawater_c316dfd3-008e-4801-accd-7f8aa5b2226c_1024x1024.png?v=1535038372",
+  "http://d26lpennugtm8s.cloudfront.net/stores/064/882/products/1-remera_certified_estampados_mockup_charly-mas-spinetta1-f91a6d232b8864bc2d16032233908692-640-0.jpg",
   3
 );
 
@@ -29,35 +29,35 @@ let producto2 = new producto(
   "Jean No Age",
   "Large",
   2900,
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Y5UVofswJ8oJ-DxBXt0UU1NOPQqH9o_0Uw&usqp=CAU",
+  "https://http2.mlstatic.com/D_NQ_NP_630522-MLA32412185495_102019-W.jpg",
   3
 );
 let producto3 = new producto(
   "Campera traviesa",
   "Medium",
   5000,
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBHIxpuzGq1zmNyzDBvi5ArG5L10t_SowMSA&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGn6W8upcmhGQt6AOue21qewyA-Hs-8BrvsA&usqp=CAU",
   3
 );
 let producto4 = new producto(
   "Vestido dulce",
   "Small",
   2500,
-  "https://hips.hearstapps.com/ellees.h-cdn.co/assets/15/37/original/original--b2bb-b7887f8e9d88el-estilo-de-inspirate-en-las-modelos-de-los-90-mango2-11865681-1-esl-es-mango-jpg.jpg",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6QML_tyv2c-L5pdcvZfLXYFQPU3QQ1m71eg&usqp=CAU",
   3
 );
 let producto5 = new producto(
   "Pollera 90s",
   "Medium",
   1900,
-  "https://viac.com.ar/wp-content/uploads/2020/03/Pollera-escosesa1-300x450.jpg",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThshmQfKmNcCJPna83CyhxLjWO-VToySXNTA&usqp=CAU",
   3
 );
 let producto6 = new producto(
   "Remera itaran",
   "Large",
   2000,
-  "https://http2.mlstatic.com/D_NQ_NP_835230-MLA43474709669_092020-O.jpg",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu5FIS5ZMCzPC4LobowEMsK-R4LmtIpUFLDA&usqp=CAU",
   3
 );
 
@@ -73,18 +73,18 @@ for (let i = 0; i < baseDeDatos.length; i++) {
   if (baseDeDatos[i].stock > 0)
     aux += `
 
- <div  class="col-lg-4 col-md-6 mb-4">
-      <div class="card h-100">
-      <a href="#"><img class= "card-img-top imagenes" src=${baseDeDatos[i].imagen} alt=""></a>
+ <div  class="col-lg-4 col-md-6 mb-4 ">
+      <div class="card h-100 cards ">
+      <a href="#"><img class= "card-img-top imagenes " src=${baseDeDatos[i].imagen} alt=""></a>
          <div  class="card-body">
-          <h4 class="card-title">
+          <h4 class="card-title ">
            <a href="#">${baseDeDatos[i].nombre}</a> 
           </h4>
           <h5>${baseDeDatos[i].precio}</h5>
           
           <button  onclick="agregarAlCarrito(baseDeDatos[${i}])">Agregar al carrito</button>
          </div>
-       <div class="card-footer">
+       <div class="card-footer colorblack">
            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
         </div>
        </div>
@@ -134,7 +134,7 @@ function agregarAlCarrito(producto) {
 
 
 
-
+//materialdesing
 
 
 
@@ -180,6 +180,7 @@ function actulizarCarritoHTML(){
     <div class="dropdown-item">
       nombre: ${carrito[i].nombre}
       <br>
+     
       <span>precio: $${carrito[i].precio}</span>
       <span>cantidad: x${carrito[i].cantidad}</span>
     </div>
@@ -201,43 +202,33 @@ function actulizarCarritoHTML(){
 }
 
     
-// function compra(){
-//   let nombre = $("#input-nombre").val();
-//   let apellido = $("#input-apellido").val();
-//   let edad = $("#input-edad").val();
-
-//   if(edad>=18){
-//       $("#parrafo-estadodecompra").html("COMPRA ACEPTADA");
-//   }else{
-//       $("#parrafo-estadodecompra").html("COMPRA DENEGADA");
-//   }
-// }
-
-
-// function compra(){
-//   let nombre = $('#nombre');
-//   let nombreUsuario = nombre.val();
-//   let apellido = $('#apellido');
-//   let apellidoUsuario = apellido.val();
-//   if ($('#edad') >= 18){
-//       alert('Bienvenido '+ nombreUsuario + '' + apellidoUsuario + '. Tu compra fue validada.')
-//   } else {
-//       alert('Sos menor de edad, tu compra no fue validada.')
-//   }
-// }
 
 
 
 
 
 
+$.get(
+  "https://usig.buenosaires.gob.ar/#servicios",
+  function(pepe, estado){
+    console.log(estado)
+    console.log(pepe)
+    baseDeDatos = valores
+  }
+)
 
 
 
 
 
 
+let rigth = new pushbar({
+  blur:true,
+  overlay:true  
 
+
+  
+});
 
 
 

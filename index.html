@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/pushbar.css">
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!-- FONT -->
     <script src="https://kit.fontawesome.com/7271a5d544.js" crossorigin="anonymous"></script>
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
     <!-- GOOGLEAPIS -->
 <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap" rel="stylesheet">
 
@@ -19,26 +24,27 @@ integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="ano
 
     <title>Document</title>
 </head>
+
 <body >
 <!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0a4570"  >
-  <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg  letra-nav" style="background-color:black" >
+  <a class="navbar-brand letra-nav" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="segunda.html">Crea tu cuenta<span class="sr-only">(current)</span></a>
+        <a class="nav-link letra-nav" href="segunda.html">Crea tu cuenta<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#"></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link letra-nav" href="#">Pricing</a>
       </li> 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle letra-nav" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown link
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -57,23 +63,52 @@ integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="ano
     </span> -->
     
 
-<!-- jumbotron -->
-<div  id="color-fondo-jumbo" class="jumbotron" >
-    <h1 class="display-4 centrar color-letra letrajumbo">Mestiza </h1>
-    
-    <p class="lead centrar  color-letra letrajumbo ">Somos un emprendimiento de ropa unica. Cada prenda tiene horas de trabajo, diseño y perfeccionamiento. Queremos que encuentres tu prenda preferida y que sepas que como la tuya no existe nada igual. </p>
-    <hr class="my-4">
-    
-    <p></p>
-  
+
+<div class="carrousel">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="imgcarrusel" src="https://upload.wikimedia.org/wikipedia/commons/6/67/Pappo%27s_Blues_-_Pappo%27s_Blues.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img  class="imgcarrusel" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTegdQ2b5N5ILY9oEr-cR6bcYB3cCFT6jUp4g&usqp=CAU" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img class="imgcarrusel" src="https://www.signos.fm/wp-content/uploads/2017/07/RatonesParanoico-e1499806157765.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
+</div>
+
+
+<br>
+
+
+
+<h1 class="letrajumbo"> Mestiza</h1>
+
+  
+
  <!-- PAGE CONTENT -->
  
  <!-- carrito -->
 
  <div class="col-lg-3">
  
-  <div class="carrito  ">
+  <div class=" ">
     <div class="list-group-item">
       Precio Total: <span id="precio-total">0</span>
       <!-- <a href="#" class="list-group-item" id="precio-total">No hay productos en el carrito</a> -->
@@ -97,7 +132,7 @@ integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="ano
     <!-- CATALOGO -->
  
     
-      
+      <
     
 
   <div class="div-formulario"  >
@@ -119,118 +154,19 @@ integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="ano
         </div>
       </div>
     </div>
-    <!-- <i class="fas fa-hat-cowboy-side"></i>
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card h-100">
-        <a href="#"></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="#">Item Two</a>
-          </h4>
-          <h5>$24.99</h5>
-          <p   class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card h-100">
-        <a href="#"></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="#">Item Three</a>
-          </h4>
-          <h5>$24.99</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card h-100">
-        <a href="#"><img class="card-img-top" alt=""></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="#">Item Four</a>
-          </h4>
-          <h5>$24.99</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card h-100">
-        <a href="#"><img class="card-img-top" ></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="#">Item Five</a>
-          </h4>
-          <h5>$24.99</h5>
-          <p class="card-text">el amor</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card h-100">
-        <a href="#"><img class="card-img-top" ></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="#">Item Six</a>
-          </h4>
-          <h5>$24.99</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-        </div>
-      </div>
+    
     </div> -->
 
   </div>
-  </div>
-
-<!-- <br>
-<br>
-<br>
-<hr>
-<div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><br>
+  
 
 
+<button class="btn-menu" data-pushbar-target="pushbar-menu">holaaaaaa</button>
+ <div data-pushbar-id="pushbar-menu" class="pushbar from_rigth">
+   
+<h1>hola mndo</h1>
 
-  <input type="text" id="nombre" placeholder="Nombre">
-    <input type="text" id="apellido" placeholder="apellido">
-    <input type="number" id="edad" placeholder="edad">
-    <button onclick="compra()">COMPRAR</button>
-    <p id="parrafo-estadodecompra"></p>
-
-
- <br>
- <br>
- <br>
- -->
-
- 
+</div>
 
 
 
@@ -249,5 +185,6 @@ integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="ano
 
   <!-- codigo -->
     <script src="js/script.js"></script>
+    <script src="js/pushbar.js"></script>
 </body>
 </html>

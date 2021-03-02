@@ -1,13 +1,9 @@
-#color-fondo-jumbo{
-  background-color:rgba(43, 39, 39, 0.76);
-}
+
 .centrar{
     text-align: center;
 }
 
-body {
-    text-align: center;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlteEuIl2Ut1oSxGn3s4fz7o27zZUrCK7z_Q&usqp=CAU");}
+
     
 
 .imagenes{
@@ -37,24 +33,62 @@ body {
 
 .navbar{
     padding: 3%;
+    
 }
 
 .div-formulario{
    width: 1000px;
    height: 1000px;
    margin-left: 280px;
+ 
 
-   
 
+ 
+}
+.colorblack{
+    background-color: black;
+}
+
+.cards{
+
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+    text-align: center;
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    
+
+}
+.imgcarrusel{
+    height: 600px;
+    width: 100% 
+    
+    
+}
+.carrousel{
+    
+    /* distribuir elementos en el eje principal */
+    justify-content: space-between;
+    
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .letra-nav{
     font-family: 'Londrina Solid', cursive;
-    font-size: 15px;
+  
+    color: blanchedalmond;
 }
 
 .letrajumbo{
-    font-family: 'Londrina Solid', cursive;
+    font-family: 'Rock Salt', cursive;;
+    text-align: center;
+    font-size: 100px;
+  color: red;
 }
 
 .final{
@@ -65,5 +99,5 @@ body {
     margin-left: 600xp;
 }
 
-/* segunda pagina */
+
 
